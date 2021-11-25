@@ -86,15 +86,15 @@ const searchService = function(callback) { //to be completed
     });
 };
 
-const searchUsername = function(username, callback) {
-  clientDAO.findByUsername(username, function(err, rows) {
-      if (err) {
-          throw err;
-      } else {
-          callback(false, rows);
-      }
-  });
-}
+ const searchUsername = function(username, callback) {
+   clientDAO.findByUsername(username, function(err, rows) {
+       if (err) {
+           throw err;
+       } else {
+           callback(false, rows);
+       }
+   });
+ }
 
 const searchNumclientService = function(num_client, callback) {
     clientDAO.findByNumclient(num_client,function(err, rows) {
@@ -126,7 +126,7 @@ module.exports = {
     loginService,
     registerService,
     searchNumclientService,
-    searchUsername,
+     searchUsername,
     searchService,
     deleteService
 };
